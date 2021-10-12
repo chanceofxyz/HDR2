@@ -1,4 +1,6 @@
-function HDRando2(entityID, varId, option1, option2, PM_Index) {
+// console.log(Hdrando(1,0,0,0,10));
+
+export function Hdrando(entityId, varId, option1, option2, pmIndex) {
   // supports 4 variables for sipmath 3.0 standard
   const largePrime = 4294967296; // there are a lot of primes. ?? Need to find out when to change them
   // Do we need this in js? is there a modulo?
@@ -12,9 +14,9 @@ function HDRando2(entityID, varId, option1, option2, PM_Index) {
         MOD(
           999999999999989,
           MOD(
-            PM_Index * 2499997 +
+            pmIndex * 2499997 +
               varId * 1800451 +
-              entityID * 2000371 +
+              entityId * 2000371 +
               option1 * 1796777 +
               option2 * 2299603,
             7450589
@@ -29,9 +31,9 @@ function HDRando2(entityID, varId, option1, option2, PM_Index) {
           MOD(
             999999999999989,
             MOD(
-              PM_Index * 2246527 +
+              pmIndex * 2246527 +
                 varId * 2399993 +
-                entityID * 2100869 +
+                entityId * 2100869 +
                 option1 * 1918303 +
                 option2 * 1624729,
               7450987
